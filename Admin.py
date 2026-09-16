@@ -1,5 +1,5 @@
 class Admin :
-    def __init(self, admin_id, name, email ):
+    def __init__(self, admin_id, name, email ):
         self.adminId=admin_id
         self.name=name
         self.email=email
