@@ -2,13 +2,13 @@ from datetime import datetime
 
 class User:
     def __init__(self, user_id, name, email, role):
-        self.userID = user_id    # self equivaut à this->userID = user_id en C++ (je fais ce commentaire pour moi Bamba)
+        self.userID = user_id    # self equivaut Ã  this->userID = user_id en C++ (je fais ce commentaire pour moi Bamba)
         self.name = name
         self.email = email
         self.role = role 
 
     def createTicket(self, ticket):
-        ticket.creator = self    # implémente l'association "creates" : le ticket garde une référence vers son créateur
+        ticket.creator = self    # implÃ©mente l'association "creates" : le ticket garde une rÃ©fÃ©rence vers son crÃ©ateur
         print(f"{self.name} a cree le ticket #{ticket.ticketID} : {ticket.title}")
 
 
@@ -17,7 +17,7 @@ class User:
         print(f"Titre : {ticket.title}")
         print(f"Description : {ticket.description}")
         print(f"Statut : {ticket.status}")
-        print(f"Priorité : {ticket.priority}") 
+        print(f"PrioritÃ© : {ticket.priority}") 
 
 
     def updateTicket(self, ticket, title=None, description=None, priority=None):

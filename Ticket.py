@@ -10,12 +10,12 @@ class Ticket:
         self.creationDate = datetime.now()
         self.updateDate = datetime.now()
 
-        self.comments = []       # liste vide qui contiendra les commentaires ajoutés au fil du temps
-        self.assignedTo = None   # aucun développeur assigné au départ
+        self.comments = []       # liste vide qui contiendra les commentaires ajoutÃ©s au fil du temps
+        self.assignedTo = None   # aucun dÃ©veloppeur assignÃ© au dÃ©part
 
     def assignTo(self, user):
         self.assignedTo = user            # on enregistre qui est maintenant responsable du ticket
-        self.status = "ASSIGNÉ"           # le ticket change automatiquement de statut
+        self.status = "ASSIGNÃ‰"           # le ticket change automatiquement de statut
         self.updateDate = datetime.now()  # on trace le moment de l'assignation
 
     def updateStatus(self, status):
@@ -26,6 +26,6 @@ class Ticket:
         self.comments.append(comment)
 
     def __str__(self):
-        return f"Ticket #{self.ticketID} - {self.title} [{self.status}] (priorité: {self.priority})" 
+        return f"Ticket #{self.ticketID} - {self.title} [{self.status}] (prioritÃ©: {self.priority})" 
 
 
