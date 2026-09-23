@@ -8,11 +8,11 @@ def main():
     # Objets créées pour tester le menu
     dev1 = User(1, "Almamy", "Almamy.Sylla@uqac.ca", role="Développeuse")
     admin1 = Admin(1, "Bamba", "Bamba.admin@uqac.ca")
-    ticket1 = Ticket(101, "Bug d'affichage", "Le bouton de connexion ne répond pas sur mobile.")
-    admin1._tickets.append(ticket1)  # contournement temporaire — cf. Section I du rapport
+    ticket1 = Ticket(101, "Test d'affichage", "la connexion vers le mobile est lente")
+    admin1._tickets.append(ticket1)  
 
     while True:
-        print("\n=== Menu principal ===")
+        print("\n Menu principal: ")
         print("1. connecter vous comme user")
         print("2. connecter vous comme Admin")
         print("3. Quitter")
@@ -21,7 +21,7 @@ def main():
         if choix == "1":
             # --- Sous-menu User ---
             while True:
-                print("\n--- Menu User ---")
+                print("\n Menu User:")
                 print("1. Créer un ticket")
                 print("2. Voir le ticket")
                 print("3. Mettre à jour le ticket")
@@ -43,7 +43,7 @@ def main():
         elif choix == "2":
             # --- Sous-menu Admin ---
             while True:
-                print("\n--- Menu Admin ---")
+                print("\n Menu Admin:")
                 print("1. Assigner le ticket à dev1")
                 print("2. Fermer le ticket")
                 print("3. Voir tous les tickets")
