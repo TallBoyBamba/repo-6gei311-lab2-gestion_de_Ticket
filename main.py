@@ -1,18 +1,17 @@
-#-*- coding: utf-8 -*- 
+# -*- coding: utf-8 -*-
 from User import User
 from Admin import Admin
-from Ticket import Ticket 
+from Ticket import Ticket
 
 
 def main():
-    # Objets créées pour tester le menu
-    dev1 = User(1, "Almamy", "Almamy.Sylla@uqac.ca", role="Développeuse")
+    # Objets créés pour tester le menu
+    dev1 = User(1, "Almamy", "Almamy.Sylla@uqac.ca", role="Développeur")
     admin1 = Admin(1, "Bamba", "Bamba.admin@uqac.ca")
-    ticket1 = Ticket(101, "Test d'affichage", "la connexion vers le mobile est lente")
-    admin1._tickets.append(ticket1)  
+    ticket1 = Ticket(101, "Bug d'affichage", "la connexion mobile est lente.")
 
     while True:
-        print("\n Menu principal: ")
+        print("\n Menu principal:")
         print("1. connecter vous comme user")
         print("2. connecter vous comme Admin")
         print("3. Quitter")
@@ -29,16 +28,16 @@ def main():
                 sous_choix = input("Choix : ")
 
                 if sous_choix == "1":
-                    dev1.createTicket(ticket1)
+                    admin1.createTicket(dev1, ticket1)
                 elif sous_choix == "2":
-                    dev1.viewTicket(ticket1)
+                    admin1.viewTicket(dev1, ticket1)
                 elif sous_choix == "3":
                     nouvelle_priorite = input("Nouvelle priorité : ")
-                    dev1.updateTicket(ticket1, priority=nouvelle_priorite)
+                    admin1.updateTicket(dev1, ticket1, priority=nouvelle_priorite)
                 elif sous_choix == "4":
                     break
                 else:
-                    print("Choix invalide, fais un bon choix.")
+                    print("Choix invalide, réessaie.")
 
         elif choix == "2":
             # --- Sous-menu Admin ---
@@ -60,14 +59,14 @@ def main():
                 elif sous_choix == "4":
                     break
                 else:
-                    print("Choix invalide, fais un bon choix.")
+                    print("Choix invalide, fais un bon choix .")
 
         elif choix == "3":
-            print("A la prochaine")
+            print("Au revoir")
             break
         else:
             print("Choix invalide, fais un bon choix.")
 
 
 if __name__ == "__main__":
-    main() 
+    main()
