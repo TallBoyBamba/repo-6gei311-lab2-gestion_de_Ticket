@@ -67,7 +67,7 @@ Projet/
 ├── Ticket.py
 ├── Attachment.py
 ├── README.md
-└── images/
+
 ```
 
 -   `main.py` : point d'entrée du programme et menus.
